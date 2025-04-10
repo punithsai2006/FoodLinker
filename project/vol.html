@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer with FoodLinker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2E7D32;
+            color: white;
+            padding: 20px 40px;
+            font-size: 28px;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        main {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #volunteer {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        #volunteer h2 {
+            color: #2E7D32;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: 700;
+            color: #2E7D32;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"] {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+
+        button[type="submit"] {
+            background-color: #FF8F00;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #F57C00;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #2E7D32;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        #logo {
+            margin-bottom: 20px;
+        }
+
+        #logo a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        #logo img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s;
+        }
+
+        #logo img:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 20px;
+            }
+            
+            #volunteer {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>FoodLinker</h2>
+    </header>
+    <main>
+        <section id="volunteer">
+            <h2>Volunteer With Us</h2>
+            <form action="VolunteerServlet" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="volunteerName" placeholder="Your Name" required />
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Your age" required />
+
+                <label for="number">Phone Number</label>
+                <input type="tel" id="number" name="phone" placeholder="Your phone number" required />
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+
+                <label for="area">Place (Work)</label>
+                <input type="text" id="area" name="area" placeholder="Area you can serve" required />
+
+                <button type="submit">Join as Volunteer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="logo">
+            <a href="#"><img src="1_Facebook_colored_svg_copy-256.webp" alt="Facebook"></a>
+            <a href="#"><img src="1_Instagram_colored_svg_1-256.webp" alt="Instagram"></a>
+            <a href="#"><img src="1_Twitter3_colored_svg-256.webp" alt="Twitter"></a>
+            <a href="#"><img src="1_Youtube_colored_svg-256.webp" alt="YouTube"></a>
+        </div>
+        © 2025 FoodLinker. All rights reserved.
+    </footer>
+</body>
+</html>
