@@ -23,13 +23,31 @@
         }
 
         header {
-            background-color: #2E7D32;
-            color: white;
-            padding: 20px 40px;
-            font-size: 28px;
-            font-weight: 700;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+      background-color: #2E7D32; /* Deep green */
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h2 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    header a:hover {
+      opacity: 0.8;
+    }
 
         main {
             flex: 1;
@@ -170,7 +188,11 @@
 <body>
     <header>
         <h2>FoodLinker</h2>
-    </header>
+        <div>
+          <a href="#"  style="color: #FFC107;">Log In</a>
+          <a href="reg.html">Register</a>
+        </div>
+      </header>
 
     <main>
         <div class="login-container">
@@ -193,7 +215,7 @@
                 </div>
                 
                 <div class="register-link">
-                    Don't have an account? <a href="reg.html">Register here</a>
+                    Don't have an account? <a href="register.html">Register here</a>
                 </div>
             </form>
         </div>
