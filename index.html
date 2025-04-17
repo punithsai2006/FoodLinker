@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodLinker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2E7D32;
+      /* Deep green */
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    header h2 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .head-button {
+      display: flex;
+      gap: 20px;
+    }
+
+    .head-button a {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .head-button a:first-child {
+      background-color: #FF8F00;
+      color: white;
+    }
+
+    .head-button a:last-child {
+      background-color: white;
+      color: #2E7D32;
+    }
+
+    .head-button a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      background-color: #4CAF50;
+      /* Medium green */
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: #FFC107;
+      /* Yellow accent */
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero-buttons button:first-child {
+      background-color: #FF8F00;
+      color: white;
+    }
+
+    .hero-buttons button:last-child {
+      background-color: white;
+      color: #2E7D32;
+    }
+
+    .hero-buttons button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero img {
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .box h2 {
+      color: #2E7D32;
+      /* Deep green */
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .box p {
+      margin-bottom: 15px;
+    }
+
+    .box ul {
+      padding-left: 20px;
+    }
+
+    .box li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #2E7D32;
+      /* Deep green */
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    #logo {
+      margin-bottom: 20px;
+    }
+
+    #logo a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    #logo img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
+    }
+
+    #logo img:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .head-button {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .head-button a {
+        padding: 8px 0px;
+        margin: 10px;
+        width: 100px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero img {
+        margin-top: 30px;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>FoodLinker</h2>
+    <div class="head-button">
+      <a href="log.html">Log In</a>
+      <a href="#">Register</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Share more,<br><span>waste less</span></h1>
+      <p>FoodLinker helps bridge the gap between surplus food and hungry people in your community.</p>
+      <div class="hero-buttons">
+        <button onclick="window.location.href='donation.html'">DONATE NOW</button>
+        <button onclick="window.location.href='vol.html'">Apply as Volunteer</button>
+      </div>
+    </div>
+    <img src="hero.png" alt="Food sharing image">
+  </div>
+
+  <section>
+    <div class="box">
+      <h2>About Us</h2>
+      <p>FoodLinker is a platform dedicated to bridging the gap between excess food and hunger. Whether you're a
+        restaurant owner, an event organizer, or someone with leftover food from a celebration, you can use our platform
+        to donate that food to people in need.</p>
+      <p>We make the process simple and efficient—just register, fill out a quick form, and our volunteers will ensure
+        the food reaches the right hands. Together, we can make a difference, one meal at a time.</p>
+    </div>
+
+    <div class="box">
+      <h2>Vision</h2>
+      <p>Our vision is a world where excess food reaches empty plates, not trash bins. We aspire to build a strong
+        network of donors and volunteers to ensure that every leftover meal becomes a source of hope for someone in
+        need. With technology and community spirit, FoodLinker aims to create a sustainable and hunger-free future.</p>
+    </div>
+
+    <div class="box">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Food Donation Form:</strong> A quick and easy form for anyone with excess food to register and
+          schedule a donation pickup.</li>
+        <li><strong>Volunteer Registration:</strong> Join us as a volunteer to help collect and distribute food to
+          people in need.</li>
+        <li><strong>User Dashboard:</strong> Track your past donations and see the impact you've made.</li>
+        <li><strong>Awareness Campaigns:</strong> We also run campaigns to spread awareness about food waste and hunger
+          issues in local communities.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div id="logo">
+      <a href="#"><img src="1_Facebook_colored_svg_copy-256.webp" alt="Facebook"></a>
+      <a href="#"><img src="1_Instagram_colored_svg_1-256.webp" alt="Instagram"></a>
+      <a href="#"><img src="1_Twitter3_colored_svg-256.webp" alt="Twitter"></a>
+      <a href="#"><img src="1_Youtube_colored_svg-256.webp" alt="YouTube"></a>
+    </div>
+    © 2025 FoodLinker. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
