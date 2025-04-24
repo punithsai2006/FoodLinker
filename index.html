@@ -5,21 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FoodLinker</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
       background-color: #f8f9fa;
       color: #333;
       line-height: 1.7;
-      font-weight: 400;
     }
 
     header {
@@ -37,8 +34,7 @@
 
     header h2 {
       font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      font-weight: bold;
     }
 
     .head-button {
@@ -82,7 +78,6 @@
       padding: 80px 40px;
       background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
       color: white;
-      flex-wrap: wrap;
     }
 
     .hero-text {
@@ -110,7 +105,6 @@
     .hero-buttons {
       display: flex;
       gap: 20px;
-      flex-wrap: wrap;
     }
 
     .hero-buttons button {
@@ -123,6 +117,9 @@
       transition: all 0.3s ease;
     }
 
+    .hero-buttons a{
+      text-decoration: none;
+    }
     .hero-buttons button:first-child {
       background-color: #FF8F00;
       color: white;
@@ -144,11 +141,6 @@
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      transition: transform 0.5s ease;
-    }
-
-    .hero img:hover {
-      transform: scale(1.02);
     }
 
     section {
@@ -157,69 +149,67 @@
       margin: 0 auto;
     }
 
-    .box, .box1, .box2, .box3{
+    .box {
       background-color: white;
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
       margin-bottom: 40px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .box:hover, .box1:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .box h2, .box1 h2 {
+    .box h2 {
       color: #2E7D32;
       font-size: 28px;
       margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 10px;
     }
 
-    .box p, .box1 p {
+    .box p {
       margin-bottom: 15px;
       font-size: 16px;
       line-height: 1.8;
     }
 
-    .box ul, .box1 ul {
+    .box ul {
       margin-left: 20px;
       margin-bottom: 20px;
     }
 
-    .box li, .box1 li {
+    .box li {
       margin-bottom: 10px;
-      padding-left: 20px;
-    }
-    .box1 {
-      width: 100%;
     }
 
-    .box1 .flex-wrap {
+    .feature-box {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
       gap: 40px;
+      align-items: center;
+      margin-bottom: 40px;
     }
 
-    .box1 img {
+    .feature-box img {
       max-width: 450px;
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box .text-content {
       flex: 1;
     }
 
-    .box1 .text-content {
-      flex: 2;
-      min-width: 300px;
+    .highlight-box {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin: 20px 0;
+      padding: 25px;
+      border-left: 4px solid #FF8F00;
     }
 
-    .box1 button {
+    .highlight-box h3 {
+      color: #2E7D32;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
       background-color: #FF8F00;
       color: white;
       padding: 12px 28px;
@@ -230,47 +220,35 @@
       font-size: 16px;
       transition: all 0.3s ease;
       margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    .box1 button:hover {
+    .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(255, 143, 0, 0.3);
-      background-color: #FF9800;
     }
 
-    .box1 ol, .box1 ul {
-      margin-left: 20px;
+    .testimonials {
+      text-align: center;
+      margin: 60px 0;
     }
 
-    .box2 {
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      margin: 20px 0;
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-card {
+      background-color: white;
       padding: 25px;
-      border-left: 4px solid #FF8F00;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 300px;
     }
 
-    .box2 h3 {
-      color: #2E7D32;
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-
-    button a {
-      text-decoration: none;
-      color: inherit;
-      display: inline-block;
-      width: 100%;
-    }
-
-    .rewive{
-        text-align: center;
-        
-    }
-    .rewive-box{
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
     footer {
       background-color: #333;
       color: white;
@@ -282,14 +260,9 @@
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        text-align: center;
         gap: 15px;
         padding: 20px;
-      }
-
-      .head-button {
-        flex-wrap: wrap;
-        justify-content: center;
+        text-align: center;
       }
 
       .hero {
@@ -306,26 +279,17 @@
         justify-content: center;
       }
 
-      .hero img {
-        margin-top: 30px;
+      .feature-box {
+        flex-direction: column;
+        text-align: center;
       }
 
       section {
         padding: 60px 20px;
       }
 
-      .box, .box1, .box2 {
+      .box {
         padding: 25px;
-      }
-
-      .box1 .flex-wrap {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-      }
-
-      .box1 .text-content {
-        text-align: left;
       }
     }
 
@@ -343,20 +307,15 @@
         gap: 10px;
       }
       
-      .hero-buttons button {
-        width: 100%;
-      }
-      
-      .head-button a {
-        padding: 8px 16px;
-        font-size: 14px;
+      .head-button {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <h2>FoodLinker</h2>
     <div class="head-button">
@@ -370,8 +329,8 @@
       <h1>Share more,<br><span>waste less</span></h1>
       <p>FoodLinker helps bridge the gap between surplus food and hungry people in your community.</p>
       <div class="hero-buttons">
-        <button><a href="#donation">DONATE NOW</a></button>
-        <button><a href="#volunteer">Apply as Volunteer</a></button>
+        <button><a href="#donation" style="color: #f8f9fa;">DONATE NOW</a></button>
+        <button><a href="#volunteer" style="color: #2E7D32;">Apply as Volunteer</a></button>
       </div>
     </div>
     <img src="hero.png" alt="Food sharing image">
@@ -380,14 +339,13 @@
   <section>
     <div class="box">
       <h2>About Us</h2>
-      <p>FoodLinker is a platform dedicated to bridging the gap between excess food and hunger. Whether you're a restaurant owner, an event organizer, or someone with leftover food from a celebration, you can use our platform to donate that food to people in need.
-        <br><br>
-        We make the process simple and efficient—just register, fill out a quick form, and our volunteers will ensure the food reaches the right hands. Together, we can make a difference, one meal at a time.</p>
+      <p>FoodLinker is a platform dedicated to bridging the gap between excess food and hunger. Whether you're a restaurant owner, an event organizer, or someone with leftover food from a celebration, you can use our platform to donate that food to people in need.</p>
+      <p>We make the process simple and efficient—just register, fill out a quick form, and our volunteers will ensure the food reaches the right hands. Together, we can make a difference, one meal at a time.</p>
     </div>
 
     <div class="box">
       <h2>Vision</h2>
-      <p>Our vision is a world where excess food reaches empty plates, not trash bins. We aspire to build a strong network of donors and volunteers to ensure that every leftover meal becomes a source of hope for someone in need. With technology and community spirit, FoodLinker aims to create a sustainable and hunger-free future</p>
+      <p>Our vision is a world where excess food reaches empty plates, not trash bins. We aspire to build a strong network of donors and volunteers to ensure that every leftover meal becomes a source of hope for someone in need. With technology and community spirit, FoodLinker aims to create a sustainable and hunger-free future.</p>
     </div>
 
     <div class="box">
@@ -400,12 +358,12 @@
       </ul>
     </div>
 
-    <div class="box1" id="donation">
-      <h2>Donate Your Excess Food</h2>
-      <div class="flex-wrap">
+    <div class="box" id="donation">
+      <div class="feature-box">
         <div class="text-content">
+          <h2>Donate Your Excess Food</h2>
           <p>Whether you're a restaurant owner or just have extra food at home...</p>
-          <div class="box2">
+          <div class="highlight-box">
             <h3>How It Works</h3>
             <ol>
               <li>Register as a donor</li>
@@ -414,18 +372,18 @@
               <li>Track donations on dashboard</li>
             </ol>
           </div>
-          <button><a href="donation.html">Donate Now</a></button>
+          <a href="donation.html" class="btn">Donate Now</a>
         </div>
         <img src="donate img.jpg" alt="Donation">
       </div>
     </div>
 
-    <div class="box1" id="volunteer">
-      <h2>Become a Volunteer</h2>
-      <div class="flex-wrap">
+    <div class="box" id="volunteer">
+      <div class="feature-box">
         <div class="text-content">
+          <h2>Become a Volunteer</h2>
           <p>Join our team of volunteers who help distribute food...</p>
-          <div class="box2">
+          <div class="highlight-box">
             <h3>Volunteer Responsibilities</h3>
             <ul>
               <li>Coordinate food pickups</li>
@@ -434,54 +392,50 @@
               <li>Help with awareness campaigns</li>
             </ul>
           </div>
-          <button><a href="vol.html">Apply Now</a></button>
+          <a href="vol.html" class="btn">Apply Now</a>
         </div>
         <img src="vol img.jpg" alt="Volunteer">
       </div>
     </div>
   </section>
-  <div class="rewive">
+
+  <div class="testimonials">
     <h2>What People Say</h2>
-    <div class="rewive-box">
-        <div class="box3">
-            "As a restaurant owner, FoodLinker has helped me reduce waste while serving my community. It's a win-win!"
-            <hr>
-            <h4>- Rajesh Kumar</h4>
-            <p>Restaurant Owner</p>
-        </div>
-        <div class="box3">
-            <p>"Volunteering with FoodLinker has been incredibly rewarding. I get to directly help people in need."</p>
-            <hr>
-            <h4>- Priya Sharma</h4>
-            <p>Volunteer</p>
-        </div>
-        <div class="box3">
-            <p>"The food I received through FoodLinker helped me through a difficult time. I'm grateful for their service."</p>
-            <hr>
-            <h4>- Anonymous Recipient</h4>
-            <p>Food Recipient</p>
-        </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"As a restaurant owner, FoodLinker has helped me reduce waste while serving my community. It's a win-win!"</p>
+        <hr>
+        <h4>- Rajesh Kumar</h4>
+        <p>Restaurant Owner</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"Volunteering with FoodLinker has been incredibly rewarding. I get to directly help people in need."</p>
+        <hr>
+        <h4>- Priya Sharma</h4>
+        <p>Volunteer</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"The food I received through FoodLinker helped me through a difficult time. I'm grateful for their service."</p>
+        <hr>
+        <h4>- Anonymous Recipient</h4>
+        <p>Food Recipient</p>
+      </div>
     </div>
   </div>
 
   <footer>
     <div>
-        <div>
-            <h3>FoodLinker</h3>
-            <p>Connecting surplus food to those in need since 2025.</p>
-        </div>
-        
-        <div>
-            <h3>Contact Us</h3>
-            <p>Email: info@foodlinker.org</p>
-        </div>
+      <h3>FoodLinker</h3>
+      <p>Connecting surplus food to those in need since 2025.</p>
+    </div>
+    <div>
+      <h3>Contact Us</h3>
+      <p>Email: info@foodlinker.org</p>
     </div>
     <br>
     <hr>
     <br>
     © 2025 FoodLinker. All rights reserved.
   </footer>
-
 </body>
-
 </html>
