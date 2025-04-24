@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Donation | FoodLinker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background-color: #28a745;
+      color: white;
+      padding: 20px;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    main {
+      padding: 40px 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background-color: #28a745;
+      color: white;
+      padding: 20px;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .form-control,
+    .form-select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .form-control:focus,
+    .form-select:focus,
+    textarea:focus {
+      border-color: #28a745;
+      outline: none;
+    }
+
+    .d-grid {
+      display: grid;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 14px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    FoodLinker
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card-header">
+        <h3>Food Donation Form</h3>
+      </div>
+      <div class="card-body">
+        <form id="donationForm" action="/donate" method="POST">
+          <label for="donorName" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="donorName" name="donorName" required>
+
+          <label for="donorType" class="form-label">You are a:</label>
+          <select class="form-select" id="donorType" name="donorType" required>
+            <option value="">Select option</option>
+            <option value="restaurant">Restaurant Owner</option>
+            <option value="caterer">Caterer</option>
+            <option value="event">Event Organizer</option>
+            <option value="individual">Individual</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="organization" class="form-label">Organization Name (if applicable)</label>
+          <input type="text" class="form-control" id="organization" name="organization">
+
+          <label for="foodType" class="form-label">Type of Food</label>
+          <select class="form-select" id="foodType" name="foodType" required>
+            <option value="">Select food type</option>
+            <option value="vegetarian">Vegetarian Meals</option>
+            <option value="non-vegetarian">Non-Vegetarian Meals</option>
+            <option value="bakery">Bakery Items</option>
+            <option value="fruits">Fruits</option>
+            <option value="packaged">Packaged Food</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="quantity" class="form-label">Quantity (approx. number of people it can serve)</label>
+          <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
+
+          <label for="preparationTime" class="form-label">When was the food prepared?</label>
+          <input type="datetime-local" class="form-control" id="preparationTime" name="preparationTime" required>
+
+          <label for="pickupTime" class="form-label">Preferred Pickup Time</label>
+          <input type="datetime-local" class="form-control" id="pickupTime" name="pickupTime" required>
+
+          <label for="address" class="form-label">Pickup Address</label>
+          <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+
+          <label for="specialInstructions" class="form-label">Special Instructions</label>
+          <textarea class="form-control" id="specialInstructions" name="specialInstructions" rows="3"></textarea>
+
+          <div class="d-grid">
+            <button type="submit" class="btn">Submit Donation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
